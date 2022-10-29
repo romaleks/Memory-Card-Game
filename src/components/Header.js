@@ -2,9 +2,9 @@ import React from 'react'
 
 function Header() {
   return (
-    <div className='header'>
+    <header className='header'>
       <h1>Memory Game</h1>
-    </div>
+    </header>
   )
 }
 
