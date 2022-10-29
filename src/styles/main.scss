@@ -1,0 +1,84 @@
+// Imports
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;700&display=swap');
+// General
+$blue: #12c2e9;
+$purple: #c471ed;
+$red: #f64f59;
+
+@keyframes background-pan {
+  from {
+    background-position: 0% center;
+  }
+
+  to {
+    background-position: -200% center;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #fff;
+  font-family: 'Rubik', sans-serif;
+}
+body {
+  background: rgb(10, 10, 10);
+}
+.app {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+// Header
+.header {
+  padding: 1rem;
+  font-size: 1.5rem;
+  text-align: center;
+  color: #fff;
+  h1 {
+    animation: background-pan 5s linear infinite;
+    background: linear-gradient(90deg, $blue, $purple, $red, $blue);
+    background-size: 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    white-space: nowrap;
+  }
+}
+// Main
+.main {
+  padding: 0 1rem;
+  flex: 1;
+  display: flex;
+  gap: 2rem;
+  flex-direction: column;
+  .score {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    font-size: 1.5rem;
+  }
+  .cards {
+    flex: 1;
+    display: grid;
+    grid-template: repeat(2, 1fr) / repeat(4, 1fr);
+    gap: 2rem;
+    .card {
+      padding: 1rem;
+      flex: 1 0 25%;
+      border: 3px solid $purple;
+      border-radius: 20px 0 20px 0;
+      transition: border-radius 0.15s linear, border-color 0.15s linear;
+      cursor: pointer;
+      text-align: center;
+      &:hover {
+        border-color: #f64f59;
+        border-radius: 20px;
+      }
+    }
+  }
+}
+// Footer
+.footer {
+  padding: 2rem;
+}
