@@ -14,7 +14,7 @@ This project is a part of the "The Odin Project" [curriculum](https://www.theodi
 
 ### Screenshot
 
-!][Solution Preview](./public/preview.png)
+![Solution Preview](./public/preview.png)
 
 ### Links
 
