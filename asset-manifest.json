@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/Memory-Card-Game/static/css/main.40d51fa9.css",
+    "main.js": "/Memory-Card-Game/static/js/main.9cbbee20.js",
+    "static/media/wraith_king.png": "/Memory-Card-Game/static/media/wraith_king.a889b2b27f2867ecd15e.png",
+    "static/media/obsidian_destroyer.png": "/Memory-Card-Game/static/media/obsidian_destroyer.e916993814e6356618ab.png",
+    "static/media/necrophos.png": "/Memory-Card-Game/static/media/necrophos.c2a63a3cd69d26de1c0b.png",
+    "static/media/bane.png": "/Memory-Card-Game/static/media/bane.7697ed350ed52bfcbab7.png",
+    "static/media/lion.png": "/Memory-Card-Game/static/media/lion.fa554fbf33aa4ce7d289.png",
+    "static/media/lina.png": "/Memory-Card-Game/static/media/lina.a1b4ecd1ad6b5ea60e5c.png",
+    "static/media/chaos_knight.png": "/Memory-Card-Game/static/media/chaos_knight.3a0a1500405cea5d3ead.png",
+    "static/media/faceless_void.png": "/Memory-Card-Game/static/media/faceless_void.30a6b3e8a2838f9c20dc.png",
+    "static/media/ember_spirit.png": "/Memory-Card-Game/static/media/ember_spirit.80113a4dd7a28b25133f.png",
+    "static/media/abaddon.png": "/Memory-Card-Game/static/media/abaddon.f22c29baee37901c042a.png",
+    "static/media/github.svg": "/Memory-Card-Game/static/media/github.8a5a23251feaf7a38b930696b44562fa.svg",
+    "index.html": "/Memory-Card-Game/index.html",
+    "main.40d51fa9.css.map": "/Memory-Card-Game/static/css/main.40d51fa9.css.map",
+    "main.9cbbee20.js.map": "/Memory-Card-Game/static/js/main.9cbbee20.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.40d51fa9.css",
+    "static/js/main.9cbbee20.js"
+  ]
+}
