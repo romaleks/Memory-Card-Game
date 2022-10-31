@@ -59,21 +59,36 @@ body {
     font-size: 1.5rem;
   }
   .cards {
-    flex: 1;
-    display: grid;
-    grid-template: repeat(2, 1fr) / repeat(4, 1fr);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 2rem;
     .card {
-      padding: 1rem;
-      flex: 1 0 25%;
+      max-height: 300px;
+      padding: 3rem 0 0 0;
+      flex: 0 0 300px;
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+      gap: 1rem;
       border: 3px solid $purple;
-      border-radius: 20px 0 20px 0;
+      border-radius: 0 20px 0 20px;
       transition: border-radius 0.15s linear, border-color 0.15s linear;
       cursor: pointer;
+      overflow: hidden;
       text-align: center;
       &:hover {
-        border-color: #f64f59;
+        border-color: $blue;
         border-radius: 20px;
+        .img {
+          transform: scale(1.1);
+        }
+      }
+      .title {
+        font-size: 1.5rem;
+      }
+      img {
+        transition: transform 0.3s ease;
       }
     }
   }

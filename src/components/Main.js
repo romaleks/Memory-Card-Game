@@ -14,7 +14,7 @@ function Main() {
         <div className='best'>Best Score: {bestScore}</div>
       </div>
       <div className='cards'>
-        <Card title='Name' />
+        <Card title='Bane' />
         <Card title='Name' />
         <Card title='Name' />
         <Card title='Name' />

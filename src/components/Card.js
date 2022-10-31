@@ -1,4 +1,5 @@
 import React from 'react'
+import bane from './bane.png'
 
 function Card(props) {
   const { title } = props
@@ -6,7 +7,7 @@ function Card(props) {
   return (
     <div className='card'>
       <div className='title'>{title}</div>
-      <img src='' alt='' />
+      <img src={bane} alt='' className='img' />
     </div>
   )
 }
