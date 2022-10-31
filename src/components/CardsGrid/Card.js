@@ -1,13 +1,10 @@
 import React from 'react'
-import bane from './bane.png'
 
-function Card(props) {
-  const { title } = props
-
+function Card({ title, image }) {
   return (
     <div className='card'>
       <div className='title'>{title}</div>
-      <img src={bane} alt='' className='img' />
+      <img src={image} alt='' className='img' />
     </div>
   )
 }
