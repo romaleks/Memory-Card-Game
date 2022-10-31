@@ -47,7 +47,7 @@ body {
 }
 // Main
 .main {
-  padding: 0 1rem;
+  padding: 0 2rem 2rem;
   flex: 1;
   display: flex;
   gap: 2rem;
@@ -95,5 +95,20 @@ body {
 }
 // Footer
 .footer {
-  padding: 2rem;
+  padding: 1rem;
+  background: rgb(20, 20, 20);
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  a {
+    .icon {
+      width: 20px;
+    }
+    &:hover {
+      .icon {
+        filter: invert(17%) sepia(0%) saturate(0%) hue-rotate(330deg) brightness(96%)
+          contrast(89%);
+      }
+    }
+  }
 }
