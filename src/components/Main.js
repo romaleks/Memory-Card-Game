@@ -14,17 +14,18 @@ import obsidian_destroyer from '../assets/obsidian_destroyer.png'
 function Main() {
   const HEROES = {
     Bane: bane,
-    'Faceless Void': faceless_void,
-    Abaddon: abaddon,
     Lion: lion,
+    'Faceless Void': faceless_void,
     'Chaos Knight': chaos_knight,
     Lina: lina,
-    'Ember Spirit': ember_spirit,
     'Wraith King': wraith_king,
-    Necrophos: necrophos,
+    'Ember Spirit': ember_spirit,
+    Abaddon: abaddon,
     'Obsidian Destroyer': obsidian_destroyer,
+    Necrophos: necrophos,
   }
-  let heroesNames = Object.keys(HEROES)
+  const [heroesNames, setHeroesNames] = useState(Object.keys(HEROES))
+  const [clickedHeroes, setClickedHeroes] = useState([])
   const [currentScore, setCurrentScore] = useState(0)
   const [bestScore, setBestScore] = useState(0)
 
@@ -38,10 +39,31 @@ function Main() {
       shuffleCards[i] = temp
     }
 
-    heroesNames = [...shuffleCards]
+    setHeroesNames(shuffleCards)
   }
 
-  useEffect(shuffleCards)
+  const handleCardClick = hero => {
+    if (clickedHeroes.includes(hero)) {
+      resetScore()
+    } else {
+      updateScore()
+      setClickedHeroes([...clickedHeroes, hero])
+    }
+  }
+
+  const updateScore = () => {
+    setCurrentScore(currentScore + 1)
+    if (currentScore >= bestScore) {
+      setBestScore(currentScore + 1)
+    }
+  }
+
+  const resetScore = () => {
+    setCurrentScore(0)
+    setClickedHeroes([])
+  }
+
+  useEffect(shuffleCards, [currentScore])
 
   return (
     <main className='main'>
@@ -49,7 +71,7 @@ function Main() {
         <div className='current'>Current Score: {currentScore}</div>
         <div className='best'>Best Score: {bestScore}</div>
       </div>
-      <CardsGrid heroes={HEROES} heroesNames={heroesNames} />
+      <CardsGrid heroes={HEROES} heroesNames={heroesNames} onClick={handleCardClick} />
     </main>
   )
 }
